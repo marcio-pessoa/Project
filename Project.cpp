@@ -8,9 +8,9 @@
 /* Project
  * 
  * Description
- *   Sciemon basic and common definitions.
+ *   Project basic and common definitions.
  * 
- *   Sciemon (char *platform, char *mark, char *name,
+ *   Project (char *platform, char *mark, char *name,
  *            char *version, char *version_date,
  *            char *serial_number,
  *            char *owner,
