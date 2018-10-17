@@ -1,4 +1,4 @@
-/* Project.cpp - Sciemon basic project definitions
+/* Project.cpp - Basic Project Information Library
  * 
  */
 

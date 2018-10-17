@@ -1,4 +1,4 @@
-/* Project.h - Sciemon basic project definitions
+/* Project.h - Basic Project Information Library
  * 
  * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
  * Contributors: none
