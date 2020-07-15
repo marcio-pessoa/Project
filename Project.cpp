@@ -1,15 +1,17 @@
 /* Project.cpp - Basic Project Information Library
- * 
+ *
+ * Copyright 2020 Marcio Pessoa
+ *
  */
 
 #include "Arduino.h"
 #include "Project.h"
 
 /* Project
- * 
+ *
  * Description
  *   Project basic and common definitions.
- * 
+ *
  *   Project (char *platform, char *mark, char *name,
  *            char *version, char *version_date,
  *            char *serial_number,
@@ -17,29 +19,29 @@
  *            char *license,
  *            char *website,
  *            char *contact)
- * 
+ *
  * Parameters
- *   platform: 
+ *   platform:
  *   mark:
- *   name: 
- *   version: 
+ *   name:
+ *   version:
  *   version_date:
- *   serial_number: 
+ *   serial_number:
  *   owner:
  *   license:
  *   website:
- *   contact: 
- * 
+ *   contact:
+ *
  * Returns
  *   void
  */
-Project::Project(char *platform, char *mark, char *name,
-                 char *version, char *version_date,
-                 char *serial_number,
-                 char *owner,
-                 char *license,
-                 char *website,
-                 char *contact) {
+Project::Project(const char *platform, const char *mark, const char *name,
+                 const char *version, const char *version_date,
+                 const char *serial_number,
+                 const char *owner,
+                 const char *license,
+                 const char *website,
+                 const char *contact) {
   _platform = platform;
   _mark = mark;
   _name = name;
@@ -53,16 +55,16 @@ Project::Project(char *platform, char *mark, char *name,
 }
 
 /* reset
- * 
+ *
  * Description
  *   Restarts program from beginning but does not reset the peripherals
  *   and registers.
- * 
+ *
  *   project.reset()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -72,15 +74,15 @@ void Project::reset(void) {
 }
 
 /* owner
- * 
+ *
  * Description
  *   Information about owner.
- * 
+ *
  *   project.owner()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   String: Information about owner
  */
@@ -89,15 +91,15 @@ String Project::owner() {
 }
 
 /* license
- * 
+ *
  * Description
  *   Information about license.
- * 
+ *
  *   project.license()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   String: Information about license
  */
@@ -106,15 +108,15 @@ String Project::license() {
 }
 
 /* website
- * 
+ *
  * Description
  *   Information about website.
- * 
+ *
  *   project.website()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   String: Information about website
  */
@@ -123,15 +125,15 @@ String Project::website() {
 }
 
 /* contact
- * 
+ *
  * Description
  *   Information about contact.
- * 
+ *
  *   project.contact()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   String: Information about contact
  */
@@ -140,32 +142,34 @@ String Project::contact() {
 }
 
 /* version
- * 
+ *
  * Description
  *   System version.
- * 
+ *
  *   project.version()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   String: Information about system version
  */
 String Project::version() {
-  return (String(_platform) + " Mark " + String(_mark) + " - " + String(_name) + ", " + String(_version) + " (" + String(_version_date) + ")");
+  return (String(_platform) + " Mark " + String(_mark) + " - " +
+          String(_name) + ", " + String(_version) + " (" +
+          String(_version_date) + ")");
 }
 
 /* compiled
- * 
+ *
  * Description
  *   Compilation date.
- * 
+ *
  *   project.version()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   String: Information about system version
  */
